@@ -1,1 +1,3 @@
-# pirateskeleton
+# PIRATESKELETON
+		OR
+A DUMB RPG GAME
