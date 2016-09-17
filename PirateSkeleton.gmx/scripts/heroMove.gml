@@ -6,19 +6,28 @@ up = -keyboard_check(vk_up);
 down = keyboard_check(vk_down);
 
 
-xMove = (left + right) * cDelta(xSpd);
-yMove = (up + down) * cDelta(ySpd);
+xMove = (left + right) * (xSpd);
+yMove = (up + down) * (ySpd);
 
-if(xMove != 0 && !xMoveLogic && timeX >= 0)
+if(place_meeting(x + xMove, y, UnWalkObj))
+{
+ xMove = 0;
+}
+if(place_meeting(x, y + yMove, UnWalkObj))
+{
+ yMove = 0;
+}
+
+if(xMove != 0 && !xMoveLogic && !yMoveLogic && timeX >= 0)
 {
  xMoveLogic = true;
  xMoved = xMove;
 }
 if(xMoveLogic)
 {
-    if(timeX < timeXNum)
+    if(timeX < timeXNum && floor(timeX / timeXNum) % 1 == 0)
     {
-        x += xMoved / timeXNum;
+        x += cDelta(xMoved / timeXNum);
     }
     else
     {
@@ -32,7 +41,7 @@ if(timeX < 0 || xMoveLogic)
 }
 
 
-if(yMove != 0 && !yMoveLogic && timeY >= 0)
+if(yMove != 0 && !yMoveLogic && !xMoveLogic && timeY >= 0)
 {
  yMoveLogic = true;
  yMoved = yMove;
@@ -41,7 +50,7 @@ if(yMoveLogic)
 {
     if(timeY < timeYNum)
     {
-        y += yMoved / timeYNum;
+        y += cDelta(yMoved / timeYNum);
     }
     else
     {

@@ -52,6 +52,21 @@
   </views>
   <instances>
     <instance objName="HeroManObj" x="224" y="128" name="inst_762E66EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="64" name="inst_669015C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="96" name="inst_54BE65D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="160" name="inst_8D61C8AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="192" name="inst_A96FA3C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="128" y="160" name="inst_3F0210AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="128" y="224" name="inst_4D778819" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="192" y="224" name="inst_1BA0D19F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="256" y="224" name="inst_D5C51980" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="224" name="inst_3D5D4849" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="128" y="64" name="inst_752A4E1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="32" name="inst_92A7E20D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="288" y="32" name="inst_0DDEDD87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="256" y="32" name="inst_E7903452" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="224" y="32" name="inst_680FFA59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UnWalkObj" x="320" y="128" name="inst_58670942" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
