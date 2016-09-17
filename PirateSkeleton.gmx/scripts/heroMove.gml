@@ -20,19 +20,22 @@ if(place_meeting(x, y + yMove, UnWalkObj))
 
 if(xMove != 0 && !xMoveLogic && !yMoveLogic && timeX >= 0)
 {
+ timeX = 0;
  xMoveLogic = true;
  xMoved = xMove;
 }
 if(xMoveLogic)
 {
-    if(timeX < timeXNum && floor(timeX / timeXNum) % 1 == 0)
+    if(timeX < timeXNum && moveXCount > 0)
     {
-        x += cDelta(xMoved / timeXNum);
+        x += xMoved / timeXNum;
+        moveXCount--;
     }
     else
     {
      timeX = -2;
      xMoveLogic = false;
+     moveXCount = timeXNum;
     }
 }
 if(timeX < 0 || xMoveLogic)
@@ -41,21 +44,24 @@ if(timeX < 0 || xMoveLogic)
 }
 
 
-if(yMove != 0 && !yMoveLogic && !xMoveLogic && timeY >= 0)
+if(yMove != 0 && !xMoveLogic && !yMoveLogic && timeY >= 0)
 {
+ timeY = 0;
  yMoveLogic = true;
  yMoved = yMove;
 }
 if(yMoveLogic)
 {
-    if(timeY < timeYNum)
+    if(timeY < timeYNum && moveYCount > 0)
     {
-        y += cDelta(yMoved / timeYNum);
+        y += yMoved / timeYNum;
+        moveYCount--;
     }
     else
     {
      timeY = -2;
      yMoveLogic = false;
+     moveYCount = timeYNum;
     }
 }
 if(timeY < 0 || yMoveLogic)
