@@ -7,21 +7,36 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\PlaceHold</sprite>
+    <sprite>sprites\sprite1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\heroINI.gml</script>
-    <script>scripts\heroMove.gml</script>
     <script>scripts\cDelta.gml</script>
-    <script>scripts\BlockINI.gml</script>
+    <scripts name="Overworld">
+      <script>scripts\BlockINI.gml</script>
+      <script>scripts\heroMove.gml</script>
+      <script>scripts\heroINI.gml</script>
+    </scripts>
+    <scripts name="Combat">
+      <script>scripts\CombatINI.gml</script>
+      <script>scripts\CombatStep.gml</script>
+      <script>scripts\GUI.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\HeroManObj</object>
-    <object>objects\UnWalkObj</object>
+    <objects name="Overworld">
+      <object>objects\HeroManObj</object>
+      <object>objects\UnWalkObj</object>
+    </objects>
+    <objects name="Combat">
+      <object>objects\HeroManObjCombat</object>
+      <object>objects\CombatGUI</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\OverworldTest</room>
+    <room>rooms\CombatTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
