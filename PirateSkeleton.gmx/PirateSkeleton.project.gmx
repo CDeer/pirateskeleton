@@ -17,6 +17,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\HeroManObj</object>
+    <object>objects\UnWalkObj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
