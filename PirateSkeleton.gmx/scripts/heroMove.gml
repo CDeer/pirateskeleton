@@ -22,20 +22,19 @@ if(xMove != 0 && !xMoveLogic && !yMoveLogic && timeX >= 0)
 {
  timeX = 0;
  xMoveLogic = true;
- xMoved = xMove;
+ xMoved = xMove + x;
 }
 if(xMoveLogic)
 {
-    if(timeX < timeXNum && moveXCount > 0)
+    if(timeX < timeXNum)
     {
-        x += xMoved / timeXNum;
-        moveXCount--;
+        x = lerp(x, xMoved, (timeX / timeXNum))
     }
     else
     {
+     x = xMoved;
      timeX = -2;
      xMoveLogic = false;
-     moveXCount = timeXNum;
     }
 }
 if(timeX < 0 || xMoveLogic)
@@ -48,20 +47,19 @@ if(yMove != 0 && !xMoveLogic && !yMoveLogic && timeY >= 0)
 {
  timeY = 0;
  yMoveLogic = true;
- yMoved = yMove;
+ yMoved = yMove + y;
 }
 if(yMoveLogic)
 {
-    if(timeY < timeYNum && moveYCount > 0)
+    if(timeY < timeXNum)
     {
-        y += yMoved / timeYNum;
-        moveYCount--;
+        y = lerp(y, yMoved, (timeY / timeYNum))
     }
     else
     {
+     y = yMoved
      timeY = -2;
      yMoveLogic = false;
-     moveYCount = timeYNum;
     }
 }
 if(timeY < 0 || yMoveLogic)
