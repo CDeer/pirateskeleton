@@ -14,6 +14,7 @@
     <script>scripts\heroINI.gml</script>
     <script>scripts\heroMove.gml</script>
     <script>scripts\cDelta.gml</script>
+    <script>scripts\BlockINI.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\HeroManObj</object>

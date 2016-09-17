@@ -1,0 +1,1 @@
+cantWalk = true;
