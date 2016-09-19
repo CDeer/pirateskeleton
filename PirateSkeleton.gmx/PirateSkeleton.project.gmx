@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\PlaceHold</sprite>
     <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\Jerk</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -19,9 +20,12 @@
       <script>scripts\heroINI.gml</script>
     </scripts>
     <scripts name="Combat">
-      <script>scripts\CombatINI.gml</script>
+      <script>scripts\HeroCombatINI.gml</script>
       <script>scripts\CombatStep.gml</script>
       <script>scripts\GUI.gml</script>
+      <script>scripts\CombatINI.gml</script>
+      <script>scripts\InstCombatINI.gml</script>
+      <script>scripts\JobberCombatINI.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -31,7 +35,8 @@
     </objects>
     <objects name="Combat">
       <object>objects\HeroManObjCombat</object>
-      <object>objects\CombatGUI</object>
+      <object>objects\CombatAdmin</object>
+      <object>objects\UnfairBossCharacter</object>
     </objects>
   </objects>
   <rooms name="rooms">
