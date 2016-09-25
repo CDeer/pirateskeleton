@@ -1,16 +1,30 @@
-
-for(i = 0; i < fieldHeroesList - 1; i++)
+i = 0;
+action = false;
+if(turnGrid[|i, 0] == HeroManObjCombat)
 {
- if(fieldHeroesList[i].turn)
+ action = true;
+ if(!action)
  {
-  
+  turn = true;
+ }
+ else
+ {
+  //Controls
  }
 }
-
-for(i = 0; i < fieldJobbersList - 1; i++)
+else
 {
- if(fieldJobbersList[i].turn)
+ action = true;
+ if(!action)
  {
-  
+  turn = true;
  }
+ else
+ {
+  //Targeting and attacking.
+ }
+}
+if(turn)
+{
+ i++;
 }

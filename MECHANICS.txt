@@ -1,0 +1,23 @@
+Here it is located a more in-depth view of mechanics and systems. Basically, what variables and how it should work.
+
+Fully turn based COMBAT
+three 'classes'
+	Hero
+	Enemy
+	Admin
+
+uses two lists
+	Field heroes.
+	Field enemies.
+uses a grid
+	Turn order
+Field heroes is pulled from the current party list.
+Field enemies is pulled/built randomly from the zone's spawn table.
+
+turn order iterates and loops. 0 to max.
+when current turnorder iteration overlaps with field heroes then the hud is controllable and actions can be done.
+there is no progress in turn order until an action is made.
+
+there's an action variable and a turn variable. once an action is made (action == true) then the turn passes.
+Inputs will be managed by a separate script. they'll iterate through a list that'll compose the GUI.
+actions will be made from the admin, reading from the instance's stats and executing scripts according to what's input.
