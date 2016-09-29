@@ -1,30 +1,22 @@
-i = 0;
 action = false;
-if(turnGrid[|i, 0] == HeroManObjCombat)
+if(ds_grid_get(turnGrid, i, 0) == fieldHeroesList[| i])
 {
  action = true;
- if(!action)
+ if(action)
  {
-  turn = true;
- }
- else
- {
-  //Controls
+  PlayerCombat();
  }
 }
-else
+if(ds_grid_get(turnGrid, i, 0) == fieldJobbersList[| (i - HeroListSize)])
 {
- action = true;
- if(!action)
- {
-  turn = true;
- }
- else
- {
-  //Targeting and attacking.
- }
+ turn = true;
 }
 if(turn)
 {
  i++;
+ turn = false;
+}
+if(i > ds_grid_width(turnGrid) - 1)
+{
+ i = 0;
 }

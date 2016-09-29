@@ -1,4 +1,4 @@
-Here it is located a more in-depth view of mechanics and systems. Basically, what variables and how it should work.
+a more in-depth view of mechanics and systems. Basically, what variables and how it should work. Or something to add in so that it doesn't look as improvised [SPOILERS: THIS IS BEING ADDED AFTER BEING CODED.]
 
 Fully turn based COMBAT
 three 'classes'
@@ -21,3 +21,10 @@ there is no progress in turn order until an action is made.
 there's an action variable and a turn variable. once an action is made (action == true) then the turn passes.
 Inputs will be managed by a separate script. they'll iterate through a list that'll compose the GUI.
 actions will be made from the admin, reading from the instance's stats and executing scripts according to what's input.
+
+Lists are used to choose targets.
+
+CHOOSING OBJECTIVE
+one list
+	HeroSelection = field Jobbers
+selects from the list, shows selection on GUI + uses selection for damage scripts.

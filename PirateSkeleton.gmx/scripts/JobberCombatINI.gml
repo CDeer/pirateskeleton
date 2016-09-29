@@ -1,4 +1,5 @@
 InstCombatINI();
-healthpoint = 40;
-attackpoint = 1;
+healthPoint = 40;
+healthPointMax = 40;
+attackPoint = 1;
 agility = 4;

@@ -9,6 +9,7 @@
     <sprite>sprites\PlaceHold</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\Jerk</sprite>
+    <sprite>sprites\Selector</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,12 +21,21 @@
       <script>scripts\heroINI.gml</script>
     </scripts>
     <scripts name="Combat">
-      <script>scripts\HeroCombatINI.gml</script>
-      <script>scripts\CombatStep.gml</script>
-      <script>scripts\GUI.gml</script>
-      <script>scripts\CombatINI.gml</script>
-      <script>scripts\InstCombatINI.gml</script>
-      <script>scripts\JobberCombatINI.gml</script>
+      <scripts name="Instance initialization">
+        <script>scripts\InstCombatINI.gml</script>
+        <script>scripts\JobberCombatINI.gml</script>
+        <script>scripts\HeroCombatINI.gml</script>
+      </scripts>
+      <scripts name="Admin Scripts">
+        <script>scripts\CombatStep.gml</script>
+        <script>scripts\CombatINI.gml</script>
+        <script>scripts\GUI.gml</script>
+      </scripts>
+      <scripts name="Methods">
+        <script>scripts\HealthInteraction.gml</script>
+        <script>scripts\PlayerCombat.gml</script>
+        <script>scripts\ChangeHealth.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
