@@ -1,5 +1,15 @@
+if(i > ds_grid_height(turnGrid) - 1)
+{
+ i = 0;
+ o = 0;
+}
+if(o > ds_grid_height(turnGrid) - 1)
+{
+ o = 0;
+}
 action = false;
-if(ds_grid_get(turnGrid, i, 0) == fieldHeroesList[| i])
+HealthCheck(ds_grid_get(turnGrid, 0, i));
+if(ds_grid_get(turnGrid, 0, i).object_index == HeroManObj)
 {
  action = true;
  if(action)
@@ -7,7 +17,7 @@ if(ds_grid_get(turnGrid, i, 0) == fieldHeroesList[| i])
   PlayerCombat();
  }
 }
-if(ds_grid_get(turnGrid, i, 0) == fieldJobbersList[| (i - HeroListSize)])
+if(ds_grid_get(turnGrid, 0, i).object_index == UnfairBossCharacter)
 {
  turn = true;
 }
@@ -15,8 +25,9 @@ if(turn)
 {
  i++;
  turn = false;
+ action = false;
 }
-if(i > ds_grid_width(turnGrid) - 1)
+if(!action)
 {
- i = 0;
+ o++;
 }

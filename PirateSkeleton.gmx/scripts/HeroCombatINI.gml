@@ -1,1 +1,2 @@
 InstCombatINI();
+attackPoint = 20;

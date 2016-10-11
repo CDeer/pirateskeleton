@@ -5,6 +5,7 @@ turn = false;
 pos1 = 0;
 pos2 = 0;
 i = 0;
+o = 0;
 if(instance_exists(HeroManObjCombat))
 {
  for(i = 0; i < instance_number(HeroManObjCombat); i++)
@@ -21,18 +22,20 @@ if(instance_exists(UnfairBossCharacter))
 }
 HeroListSize = ds_list_size(fieldHeroesList);
 JobberListSize = ds_list_size(fieldJobbersList);
-turnGrid = ds_grid_create(HeroListSize + JobberListSize, 2)
+turnGrid = ds_grid_create(2, HeroListSize + JobberListSize)
 {
  for(i = 0; i < HeroListSize; i++)
  {
-  ds_grid_add(turnGrid, i, 0, fieldHeroesList[| i]);
-  ds_grid_add(turnGrid, i, 1, fieldHeroesList[| i].agility);
+  ds_grid_add(turnGrid, 0, i, fieldHeroesList[| i]);
+  ds_grid_add(turnGrid, 1, i, fieldHeroesList[| i].agility);
  }
  for(i = 0; i < JobberListSize; i++)
  {
-  ds_grid_add(turnGrid, i + HeroListSize, 0, fieldJobbersList[| i]);
-  ds_grid_add(turnGrid, i + HeroListSize, 1, fieldJobbersList[| i].agility);
+  ds_grid_add(turnGrid, 0, i + HeroListSize, fieldJobbersList[| i]);
+  ds_grid_add(turnGrid, 1, i + HeroListSize, fieldJobbersList[| i].agility);
  }
 }
 playerSelection = fieldJobbersList;
 playerSelectionSize = JobberListSize;
+ds_grid_sort(turnGrid, 1, false);
+i = 0;

@@ -35,6 +35,7 @@
         <script>scripts\HealthInteraction.gml</script>
         <script>scripts\PlayerCombat.gml</script>
         <script>scripts\ChangeHealth.gml</script>
+        <script>scripts\HealthCheck.gml</script>
       </scripts>
     </scripts>
   </scripts>
