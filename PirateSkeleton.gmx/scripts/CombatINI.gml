@@ -5,7 +5,6 @@ turn = false;
 pos1 = 0;
 pos2 = 0;
 i = 0;
-o = 0;
 if(instance_exists(HeroManObjCombat))
 {
  for(i = 0; i < instance_number(HeroManObjCombat); i++)

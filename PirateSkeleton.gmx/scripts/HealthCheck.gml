@@ -7,5 +7,13 @@ if(!(argument0.dead))
         ds_grid_set(turnGrid, 1, i, 0);
         ds_grid_sort(turnGrid, 1, false);
         ds_grid_resize(turnGrid, ds_grid_width(turnGrid), ds_grid_height(turnGrid) - 1);
+        for(n = 0; n < playerSelectionSize; n++)
+        {
+            if(argument0 == playerSelection[| n])
+            {
+                ds_list_delete(playerSelection, ds_list_find_index(playerSelection, argument0))
+                playerSelectionSize = ds_list_size(playerSelection);
+            }
+        }
     }
 }

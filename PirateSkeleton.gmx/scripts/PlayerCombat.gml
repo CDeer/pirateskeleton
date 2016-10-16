@@ -5,9 +5,9 @@ right = keyboard_check_pressed(vk_right);
 pos1 += (left + right);
 if(pos1 < 0)
 {
- pos1 = JobberListSize - 1;
+ pos1 = playerSelectionSize - 1;
 }
-if(pos1 > JobberListSize - 1)
+if(pos1 > playerSelectionSize - 1)
 {
  pos1 = 0;
 }
