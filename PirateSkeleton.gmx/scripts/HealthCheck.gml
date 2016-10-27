@@ -11,6 +11,7 @@ if(!(argument0.dead))
         {
             if(argument0 == playerSelection[| n])
             {
+                playerSelection[| n ].visible = false;
                 ds_list_delete(playerSelection, ds_list_find_index(playerSelection, argument0))
                 playerSelectionSize = ds_list_size(playerSelection);
             }

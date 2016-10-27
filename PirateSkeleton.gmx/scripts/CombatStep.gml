@@ -17,7 +17,7 @@ for(o = 0; o < HeroListSize; o++)
 }
 for(o = 0; o < JobberListSize; o++)
 {
-    if(ds_grid_get(turnGrid, 0, i) == fieldJobbersList[| o])
+    if(ds_grid_get(turnGrid, 0, i) == fieldJobbersList[| o] )
     {
         action = true;
         if(action)
@@ -25,6 +25,12 @@ for(o = 0; o < JobberListSize; o++)
             turn = true;
         }
     }
+}
+if(playerSelectionSize <= 0)
+{
+    //Do shit
+    turn = false;
+    i = 100;
 }
 if(turn)
 {
