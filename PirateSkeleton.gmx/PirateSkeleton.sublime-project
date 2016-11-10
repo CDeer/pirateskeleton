@@ -1,0 +1,28 @@
+{
+	"SublimeLinter":
+	{
+		"linters":
+		{
+			"writegood":
+			{
+				"@disable": true
+			}
+		}
+	},
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.dll",
+				"*.meta",
+				"*.gmx"
+			],
+			"path": "F:\\GameDev\\GameMaker\\GMProjects\\pirateskeleton\\PirateSkeleton.gmx\\scripts"
+		}
+	],
+	"syntax_override":
+	{
+		"\\.gml$": ["User", "SublimeText-GameMaker-Plugin-master", "GameMaker-Snippets", "GML"]
+	}
+}

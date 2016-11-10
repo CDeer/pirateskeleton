@@ -36,6 +36,7 @@
         <script>scripts\PlayerCombat.gml</script>
         <script>scripts\ChangeHealth.gml</script>
         <script>scripts\HealthCheck.gml</script>
+        <script>scripts\AutoAttack.gml</script>
       </scripts>
     </scripts>
   </scripts>

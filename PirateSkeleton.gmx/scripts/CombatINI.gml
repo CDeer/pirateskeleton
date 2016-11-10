@@ -1,6 +1,8 @@
 fieldHeroesList = ds_list_create();
 fieldJobbersList = ds_list_create();
 playerSelection = ds_list_create();
+enemySelection = ds_list_create();
+randomize();
 turn = false;
 pos1 = 0;
 pos2 = 0;
@@ -34,7 +36,15 @@ turnGrid = ds_grid_create(2, HeroListSize + JobberListSize)
   ds_grid_add(turnGrid, 1, i + HeroListSize, fieldJobbersList[| i].agility);
  }
 }
-playerSelection = fieldJobbersList;
+for(i = 0; i < JobberListSize; i++)
+{
+	playerSelection[| i] = fieldJobbersList[| i];
+}
+for(i = 0; i < HeroListSize; i++)
+{
+	enemySelection[| i] = fieldHeroesList[| i];
+}
+enemySelectionSize = HeroListSize;
 playerSelectionSize = JobberListSize;
 ds_grid_sort(turnGrid, 1, false);
 i = 0;

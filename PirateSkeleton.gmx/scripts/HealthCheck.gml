@@ -14,6 +14,10 @@ if(!(argument0.dead))
                 playerSelection[| n ].visible = false;
                 ds_list_delete(playerSelection, ds_list_find_index(playerSelection, argument0))
                 playerSelectionSize = ds_list_size(playerSelection);
+                if(pos1 >= playerSelectionSize)
+                {
+                    pos1 = playerSelectionSize - 1;
+                }
             }
         }
     }
